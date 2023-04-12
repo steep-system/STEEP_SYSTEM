@@ -141,11 +141,11 @@ mkdir /var/tls
 -rw-r--r-- 1 root root 3725 Jun 11 19:19 mail.pem
 
 #if you want to modify X500_ORG_NAME, please find them in below files and set to the same value!
-/var/medusa/http/exchange_nsp.cfg
-/var/medusa/http/exchange_emsmdb.cfg
-/var/medusa/http/exmdb_provider.cfg
-/var/medusa/midb.cfg
-/var/medusa/zcore.cfg
+/var/medusa/config/http/exchange_nsp.cfg
+/var/medusa/config/http/exchange_emsmdb.cfg
+/var/medusa/config/http/exmdb_provider.cfg
+/var/medusa/config/midb.cfg
+/var/medusa/config/zcore.cfg
 /var/herculiz/config/delivery/exmdb_local.cfg
 #also change orgnization of section "exchange" in /var/medusa/php/config/config.ini
 
@@ -256,6 +256,7 @@ maximum files: maximum files number kept in the area (e.g. 100000000)
 
 #install webapp, download webmail from https://github.com/steep-system/STEEP_WEBAPP
 #steep webapp comes from kopano webapp, for more information, please visit https://kopano.io/
+yum install java
 cd STEEP_WEBAPP-master
 make
 cp -R deploy /var/steep-webapp
